@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Logs Paneli</title>
+    <link rel="stylesheet" href="logs-admin.css">
+</head>
+<body>
+<header class="admin-header">
+    <h1>Security Logs Paneli</h1>
+    <p>İstifadəçilərin sistemdə etdiyi təhlükəsizlik və fəaliyyət hadisələri</p>
+</header>
+
+<section class="stats">
+    <div class="stat-card">
+        <h3>Ümumi hadisə</h3>
+        <p id="logCount">0</p>
+    </div>
+    <div class="stat-card">
+        <h3>Uğursuz giriş</h3>
+        <p id="failedLoginCount">0</p>
+    </div>
+    <div class="stat-card">
+        <h3>Bloklanma</h3>
+        <p id="blockedCount">0</p>
+    </div>
+</section>
+
+<section class="filter-section">
+    <input
+        type="text"
+        id="finFilter"
+        placeholder="FİN üzrə axtar..."
+        autocomplete="off"
+    >
+    <select id="eventFilter">
+        <option value="">Bütün hadisələr</option>
+        <option value="REGISTER_SUCCESS">Qeydiyyat uğurlu</option>
+        <option value="REGISTER_FAILED">Qeydiyyat uğursuz</option>
+        <option value="LOGIN_SUCCESS">Giriş uğurlu</option>
+        <option value="LOGIN_FAILED">Giriş uğursuz</option>
+        <option value="ACCOUNT_LOCKED">Hesab bloklandı</option>
+        <option value="LOGIN_BLOCKED">Bloklu hesaba giriş</option>
+        <option value="LOGOUT_SUCCESS">Hesabdan çıxış</option>
+        <option value="PASSWORD_CHANGED">Parol dəyişdirildi</option>
+        <option value="PASSWORD_CHANGE_FAILED">Parol dəyişmə uğursuz</option>
+        <option value="APPOINTMENT_CREATED">Növbə yaradıldı</option>
+    </select>
+</section>
+
+<section class="table-section">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">FİN</th>
+                <th scope="col">Hadisə</th>
+                <th scope="col">Nəticə</th>
+                <th scope="col">Ətraflı məlumat</th>
+                <th scope="col">Səhv giriş sayı</th>
+                <th scope="col">Bloklanma vaxtı</th>
+                <th scope="col">IP ünvan</th>
+                <th scope="col">Tarix / Saat</th>
+            </tr>
+        </thead>
+        <tbody id="logsTableBody">
+        </tbody>
+    </table>
+</section>
+
+<script src="logs-admin.js"></script>
+</body>
+</html>

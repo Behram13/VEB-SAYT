@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fc;
+    color: #1f2937;
+    padding: 30px;
+}
+button,
+input {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+.admin-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.admin-header h1 {
+    color: #0d47a1;
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+.admin-header p {
+    color: #64748b;
+    font-size: 16px;
+}
+.stats {
+    max-width: 1200px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.stat-card {
+    width: 260px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+.stat-card h3 {
+    color: #475569;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.stat-card p {
+    color: #0d47a1;
+    font-size: 30px;
+    font-weight: 700;
+}
+.table-section {
+    max-width: 1450px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 7px 20px rgba(15, 23, 42, 0.08);
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    min-width: 950px;
+    border-collapse: collapse;
+}
+thead {
+    background: #1565c0;
+    color: #ffffff;
+}
+th,
+td {
+    border: 1px solid #dbe2ea;
+    padding: 13px 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+th {
+    font-weight: 700;
+}
+tbody tr:nth-child(even) {
+    background: #f8fbff;
+}
+tbody tr:hover {
+    background: #eef6ff;
+}
+.hash-cell {
+    max-width: 360px;
+    min-width: 280px;
+    word-break: break-all;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 11px;
+    color: #475569;
+}
+.password-check-button {
+    border: none;
+    background: #1565c0;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+.password-check-button:hover {
+    background: #0d47a1;
+}
+.status-active {
+    color: #15803d;
+    font-weight: 700;
+}
+.status-locked {
+    color: #dc2626;
+    font-weight: 700;
+}
+.verify-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    background: rgba(15, 23, 42, 0.62);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.verify-modal.show {
+    display: flex;
+}
+.verify-box {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 34px;
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.25);
+}
+.verify-box h2 {
+    color: #0d47a1;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+.verify-description {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+.verify-description strong {
+    color: #0d47a1;
+}
+.verify-box label {
+    display: block;
+    color: #334155;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.verify-box input {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    color: #1f2937;
+    transition: 0.2s;
+}
+.verify-box input:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.08);
+}
+.verify-button {
+    width: 100%;
+    margin-top: 18px;
+    border: none;
+    background: #1565c0;
+    color: #ffffff;
+    border-radius: 9px;
+    padding: 12px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+.verify-button:hover {
+    background: #0d47a1;
+}
+.verify-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-size: 29px;
+    line-height: 1;
+}
+.verify-close:hover {
+    color: #1e293b;
+}
+.verify-result {
+    min-height: 24px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .admin-header h1 {
+        font-size: 27px;
+    }
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stat-card {
+        width: 100%;
+        max-width: 330px;
+    }
+    .table-section {
+        padding: 12px;
+    }
+    th,
+    td {
+        padding: 9px;
+        font-size: 12px;
+    }
+    .verify-box {
+        padding: 30px 20px;
+    }
+}

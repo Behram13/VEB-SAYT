@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstifadəçilər Paneli</title>
+    <link rel="stylesheet" href="users-admin.css">
+</head>
+<body>
+<header class="admin-header">
+    <h1>İstifadəçilər Paneli</h1>
+    <p>Sistemdə qeydiyyatdan keçən istifadəçilər</p>
+</header>
+
+<section class="stats">
+    <div class="stat-card">
+        <h3>İstifadəçi sayı</h3>
+        <p id="userCount">0</p>
+    </div>
+</section>
+
+<section class="table-section">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">FİN</th>
+                <th scope="col">Orijinal parol</th>
+                <th scope="col">Hashlənmiş parol</th>
+                <th scope="col">Qeydiyyat tarixi</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody id="usersTableBody">
+        </tbody>
+    </table>
+</section>
+
+<div id="passwordVerifyModal" class="verify-modal">
+    <div class="verify-box">
+        <button id="closeVerifyModal" class="verify-close" type="button">&times;</button>
+        <h2>Parolu yoxla</h2>
+        <p class="verify-description">
+            FİN:
+            <strong id="verifyFin"></strong>
+        </p>
+        <label for="verifyPassword">Orijinal parolu daxil edin</label>
+        <input
+            type="password"
+            id="verifyPassword"
+            placeholder="Parolu daxil edin"
+            autocomplete="off"
+        >
+        <button id="verifyPasswordButton" class="verify-button" type="button">
+            Yoxla
+        </button>
+        <p id="verifyResult" class="verify-result"></p>
+    </div>
+</div>
+
+<script src="users-admin.js"></script>
+</body>
+</html>

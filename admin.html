@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Növbələr Admin Paneli</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="admin-header">
+    <h1>Növbələr Admin Paneli</h1>
+    <p>Klinikaya daxil olan onlayn növbələr</p>
+</header>
+
+<section class="stats">
+    <div class="stat-card">
+        <h3>Ümumi növbə sayı</h3>
+        <p id="appointmentCount">0</p>
+    </div>
+</section>
+
+<section class="table-section">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Ad</th>
+                <th scope="col">Soyad</th>
+                <th scope="col">Telefon</th>
+                <th scope="col">Həkim</th>
+                <th scope="col">Tarix</th>
+                <th scope="col">Saat</th>
+                <th scope="col">Əməliyyat</th>
+            </tr>
+        </thead>
+        <tbody id="appointmentsTableBody">
+        </tbody>
+    </table>
+</section>
+
+<div id="deleteModal" class="delete-modal">
+    <div class="delete-modal-box">
+        <h2>Növbəni silmək istəyirsiniz?</h2>
+        <p>Bu əməliyyatdan sonra növbə bazadan silinəcək.</p>
+        <div class="delete-modal-buttons">
+            <button id="cancelDeleteButton" class="cancel-button" type="button">Ləğv et</button>
+            <button id="confirmDeleteButton" class="delete-confirm-button" type="button">Sil</button>
+        </div>
+    </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sağlam Həyat Klinikası</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container header-content">
+        <h1 class="logo">Sağlam Həyat Klinikası</h1>
+        <nav class="nav">
+            <a href="#hero">Ana səhifə</a>
+            <a href="#hekimler">Həkimlər</a>
+            <a href="#novbe" id="navNovbe">Növbə al</a>
+            <a href="#elaqe">Əlaqə</a>
+            <span id="guestMenu">
+                <button class="nav-auth-button login-nav-button" id="openLoginButton" type="button">Giriş</button>
+                <button class="nav-auth-button register-nav-button" id="openRegisterButton" type="button">Qeydiyyat</button>
+            </span>
+            <span id="userMenu" class="hidden">
+                <span id="userFin" class="user-fin"></span>
+                <button id="changePasswordButton" class="change-password-button" type="button">Parolu dəyiş</button>
+                <button id="logoutButton" class="logout-button" type="button">Çıxış</button>
+            </span>
+        </nav>
+    </div>
+</header>
+
+<section id="hero" class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h2>Sağlamlığınız bizim üçün önəmlidir</h2>
+            <p>Peşəkar həkimlərimizlə rahat və sürətli şəkildə onlayn növbə götürün. Klinikamız sizə yüksək keyfiyyətli tibbi xidmət təqdim edir.</p>
+            <button id="heroAppointmentButton" class="button" type="button">İndi növbə al</button>
+        </div>
+        <div class="hero-box">
+            <h3>24/7 xidmət</h3>
+            <p>Etibarlı tibbi xidmət və rahat qeydiyyat sistemi</p>
+        </div>
+    </div>
+</section>
+
+<section id="hekimler" class="doctors-section">
+    <div class="container">
+        <h2 class="section-title">Bizim Həkimlər</h2>
+        <div class="doctor-cards">
+            <div class="doctor-card">
+                <h3>Dr. Əli Məmmədov</h3>
+                <p class="job">Kardioloq</p>
+                <p>Qəbul saatı: 09:00 - 13:00</p>
+            </div>
+            <div class="doctor-card">
+                <h3>Dr. Aygün Həsənova</h3>
+                <p class="job">Nevropatoloq</p>
+                <p>Qəbul saatı: 11:00 - 15:00</p>
+            </div>
+            <div class="doctor-card">
+                <h3>Dr. Rəşad Əliyev</h3>
+                <p class="job">Cərrah</p>
+                <p>Qəbul saatı: 14:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="novbe" class="appointment-section">
+    <div class="container">
+        <h2 class="section-title">Onlayn Növbə Götür</h2>
+        <div id="appointmentLoginNotice" class="appointment-login-notice">
+            <h3>Növbə götürmək üçün hesabınıza daxil olun</h3>
+            <p>Mövcud hesabınıza daxil olun və ya yeni hesab yaradın.</p>
+            <div class="notice-buttons">
+                <button id="noticeLoginButton" class="button" type="button">Giriş et</button>
+                <button id="noticeRegisterButton" class="button secondary-button" type="button">Qeydiyyatdan keç</button>
+            </div>
+        </div>
+        <form id="novbe-formu" class="form-box">
+            <label for="ad">Adınız</label>
+            <input type="text" id="ad" placeholder="Adınızı yazın" required>
+            <label for="soyad">Soyadınız</label>
+            <input type="text" id="soyad" placeholder="Soyadınızı yazın" required>
+            <label for="telefon">Telefon nömrəniz</label>
+            <input type="tel" id="telefon" placeholder="050-000-00-00" required>
+            <label for="hekim">Həkim seçin</label>
+            <select id="hekim" required>
+                <option value="">Seçin...</option>
+                <option value="Dr. Əli Məmmədov (Kardioloq)">Dr. Əli Məmmədov (Kardioloq)</option>
+                <option value="Dr. Aygün Həsənova (Nevropatoloq)">Dr. Aygün Həsənova (Nevropatoloq)</option>
+                <option value="Dr. Rəşad Əliyev (Cərrah)">Dr. Rəşad Əliyev (Cərrah)</option>
+            </select>
+            <label for="tarix">Tarix</label>
+            <input type="date" id="tarix" required>
+            <label for="saat">Saat</label>
+            <input type="time" id="saat" required>
+            <button type="submit" class="button full-btn">Göndər</button>
+            <p id="mesaj" class="message"></p>
+        </form>
+    </div>
+</section>
+
+<footer id="elaqe" class="footer">
+    <div class="container footer-content">
+        <div>
+            <h3>Əlaqə</h3>
+            <p>Ünvan: Bakı şəhəri, Nizami küçəsi 15</p>
+            <p>Telefon: +994 12 123 45 67</p>
+        </div>
+        <div>
+            <h3>İş saatları</h3>
+            <p>Bazar ertəsi - Cümə: 09:00 - 18:00</p>
+            <p>Şənbə: 10:00 - 14:00</p>
+        </div>
+    </div>
+</footer>
+
+<div id="authModal" class="auth-modal">
+    <div class="auth-modal-box">
+        <button id="closeAuthModal" class="modal-close" type="button">&times;</button>
+        <h2 class="auth-title">Sağlam Həyat Klinikası</h2>
+        <p class="auth-subtitle">Hesabınıza daxil olun və ya qeydiyyatdan keçin</p>
+        <div class="auth-tabs">
+            <button id="loginTabButton" class="auth-tab active" type="button">Giriş</button>
+            <button id="registerTabButton" class="auth-tab" type="button">Qeydiyyat</button>
+        </div>
+        <form id="loginForm" class="auth-form">
+            <label for="loginFin">FİN kod</label>
+            <input type="text" id="loginFin" maxlength="7" placeholder="FİN kodunuzu yazın" autocomplete="username" required>
+            <label for="loginPassword">Parol</label>
+            <div class="password-field">
+                <input type="password" id="loginPassword" placeholder="Parolunuzu yazın" autocomplete="current-password" required>
+                <button type="button" class="password-toggle" data-target="loginPassword" aria-label="Parolu göstər">👁</button>
+            </div>
+            <button type="submit" class="button full-btn">Giriş et</button>
+            <p id="loginMessage" class="auth-message"></p>
+        </form>
+        <form id="registerForm" class="auth-form hidden">
+            <label for="registerFin">FİN kod</label>
+            <input type="text" id="registerFin" maxlength="7" placeholder="7 simvolluq FİN kod" autocomplete="username" required>
+            <label for="registerPassword">Parol</label>
+            <div class="password-field">
+                <input type="password" id="registerPassword" minlength="8" maxlength="64" placeholder="Güclü parol daxil edin" autocomplete="new-password" required>
+                <button type="button" class="password-toggle" data-target="registerPassword" aria-label="Parolu göstər">👁</button>
+            </div>
+            <div class="password-rules">
+                <p>Parol qaydaları:</p>
+                <ul>
+                    <li>Minimum 8 simvol</li>
+                    <li>Ən azı 1 böyük hərf</li>
+                    <li>Ən azı 1 kiçik hərf</li>
+                    <li>Ən azı 1 rəqəm</li>
+                    <li>Ən azı 1 xüsusi simvol</li>
+                </ul>
+            </div>
+            <label for="registerPasswordRepeat">Parolu təkrar edin</label>
+            <div class="password-field">
+                <input type="password" id="registerPasswordRepeat" minlength="8" maxlength="64" placeholder="Parolu yenidən daxil edin" autocomplete="new-password" required>
+                <button type="button" class="password-toggle" data-target="registerPasswordRepeat" aria-label="Parolu göstər">👁</button>
+            </div>
+            <button type="submit" class="button full-btn">Qeydiyyatdan keç</button>
+            <p id="registerMessage" class="auth-message"></p>
+        </form>
+    </div>
+</div>
+
+<div id="changePasswordModal" class="auth-modal">
+    <div class="auth-modal-box">
+        <button id="closeChangePasswordModal" class="modal-close" type="button">&times;</button>
+        <h2 class="auth-title">Parolu dəyiş</h2>
+        <p class="auth-subtitle">Cari parolunuzu təsdiqləyin və yeni parol təyin edin</p>
+        <form id="changePasswordForm" class="auth-form">
+            <label for="currentPassword">Cari parol</label>
+            <div class="password-field">
+                <input type="password" id="currentPassword" placeholder="Cari parolunuzu daxil edin" autocomplete="current-password" required>
+                <button type="button" class="password-toggle" data-target="currentPassword" aria-label="Parolu göstər">👁</button>
+            </div>
+            <label for="newPassword">Yeni parol</label>
+            <div class="password-field">
+                <input type="password" id="newPassword" minlength="8" maxlength="64" placeholder="Yeni parolu daxil edin" autocomplete="new-password" required>
+                <button type="button" class="password-toggle" data-target="newPassword" aria-label="Parolu göstər">👁</button>
+            </div>
+            <div class="password-rules">
+                <p>Yeni parol qaydaları:</p>
+                <ul>
+                    <li>Minimum 8 simvol</li>
+                    <li>Ən azı 1 böyük hərf</li>
+                    <li>Ən azı 1 kiçik hərf</li>
+                    <li>Ən azı 1 rəqəm</li>
+                    <li>Ən azı 1 xüsusi simvol</li>
+                </ul>
+            </div>
+            <label for="newPasswordRepeat">Yeni parolu təkrar et</label>
+            <div class="password-field">
+                <input type="password" id="newPasswordRepeat" minlength="8" maxlength="64" placeholder="Yeni parolu yenidən daxil edin" autocomplete="new-password" required>
+                <button type="button" class="password-toggle" data-target="newPasswordRepeat" aria-label="Parolu göstər">👁</button>
+            </div>
+            <button type="submit" class="button full-btn">Parolu dəyiş</button>
+            <p id="changePasswordMessage" class="auth-message"></p>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
